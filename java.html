@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sample Page</title>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+    <script type="text/javascript">
+    var count = 0;
+    function incCount(){
+      count += 1;
+      return count;
+    }
+    function countIt(){
+      $("#counter").html(incCount);
+    }
+    </script>
+
+    <style type="text/css">
+    button {
+      background-color: #0066AA;
+      color: #FFFFFF;
+      font-weight: bold;
+      border: 2px solid, #C0C0C0;
+      width: 100px;
+    }
+    </style>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+//assignment4
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points;
+
+function myFunction() {
+  points.sort(function(a, b){return a-b});
+  document.getElementById("demo").innerHTML = points;
+}
+</script>
+
+
+<script>
+var arr = [9, 9, 111, 2, 3, 4, 4, 5, 7];
+var sorted_arr = arr.sort(); // You can define the comparing function here. 
+                             // JS by default uses a crappy string compare.
+var results = [];
+for (var i = 0; i < arr.length - 1; i++) {
+    if (sorted_arr[i + 1] == sorted_arr[i]) {
+        results.push(sorted_arr[i]);
+    }
+}
+
+alert(results);
+</script>
+
+  </head>
+  
+  <body>
+    <button onclick="countIt()">Click Me</button>
+    <div id="counter"></div>
+
+<script>
+public class ReminderBeep {
+    ...
+    public ReminderBeep(int seconds) {
+        toolkit = Toolkit.getDefaultToolkit();
+        timer = new Timer();
+        timer.schedule(new RemindTask(), seconds*1000);
+    }
+    class RemindTask extends TimerTask {
+        public void run() {
+            System.out.println("Time's up!");
+            toolkit.beep();
+            //timer.cancel(); // Not necessary because
+                              // we call System.exit
+            System.exit(0);   // Stops the AWT thread
+                              // (and everything else)
+        }
+    }
+    ...
+}
+</script>
+  </body>
+</html>
