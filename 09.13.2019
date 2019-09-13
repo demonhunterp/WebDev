@@ -1,0 +1,7 @@
+4 in a Row 
+
+
+player 1 =
+Var selection= ["a1","b1","c1","d1","e1"]>>> incrementation  // diagnoal :["e1","d2","c3","b4"]
+
+
